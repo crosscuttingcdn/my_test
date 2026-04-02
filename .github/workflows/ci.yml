@@ -24,11 +24,8 @@ jobs:
           java-version: '17'
           cache: maven
 
-      - name: Build con Maven
-        run: mvn clean verify
-        
       - name: Package
-        run: mvn package
+        run: mvn clean package verify
 
   analyze:
     name: Analyze (${{ matrix.language }})
